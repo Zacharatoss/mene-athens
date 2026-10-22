@@ -1,0 +1,9 @@
+# Αρχεία που δεν ανεβαίνουν ποτέ στο GitHub
+.env
+.env.*
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+node_modules/

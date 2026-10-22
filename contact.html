@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://images.unsplash.com; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Επικοινωνία & Κρατήσεις · Μήνη Athens</title>
   <meta name="description" content="Κρατήσεις, ωράριο και διεύθυνση του Μήνη Athens στην Καλλιθέα.">
   <meta name="theme-color" content="#4d4e33">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -38,9 +38,16 @@
           </div>
         </div>
 
-        <iframe class="map" title="Χάρτης: Μήνη Athens"
-          src="https://maps.google.com/maps?q=%CE%A0%CE%B1%CF%80%CE%B1%CE%B6%CE%B1%CF%87%CE%B1%CF%81%CE%AF%CE%BF%CF%85%203%2C%20%CE%9A%CE%B1%CE%BB%CE%BB%CE%B9%CE%B8%CE%AD%CE%B1&z=16&output=embed"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Ο χάρτης Google φορτώνει μόνο αν το ζητήσει ο επισκέπτης (GDPR) -->
+        <div class="map map-consent" data-map-src="https://maps.google.com/maps?q=%CE%A0%CE%B1%CF%80%CE%B1%CE%B6%CE%B1%CF%87%CE%B1%CF%81%CE%AF%CE%BF%CF%85%203%2C%20%CE%9A%CE%B1%CE%BB%CE%BB%CE%B9%CE%B8%CE%AD%CE%B1&z=16&output=embed">
+          <span class="moon moon--full" aria-hidden="true"></span>
+          <h3>Χάρτης</h3>
+          <p>Ο χάρτης παρέχεται από τη Google. Αν τον εμφανίσεις, η Google θα λάβει τη διεύθυνση IP σου και μπορεί να αποθηκεύσει cookies. <a href="privacy.html">Περισσότερα</a></p>
+          <div class="btn-row">
+            <button type="button" class="btn btn-moon" data-map-load>Εμφάνιση χάρτη</button>
+            <a class="btn" data-href="maps" href="#">Άνοιγμα στο Google Maps ↗</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>

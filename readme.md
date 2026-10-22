@@ -10,7 +10,8 @@ Live: https://zacharatoss.github.io/mene-athens/
 | `index.html` | Αρχική: hero, πρωί/μεσημέρι/βράδυ, κριτικές, κράτηση, delivery |
 | `menu.html` | Μενού. **Αυτή τη διεύθυνση βάζεις στο QR code.** |
 | `about.html` | Για εμάς (προσωρινό κείμενο) |
-| `contact.html` | Τηλέφωνο, διεύθυνση, ωράριο, χάρτης |
+| `contact.html` | Τηλέφωνο, διεύθυνση, ωράριο, χάρτης (φορτώνει μόνο με κλικ) |
+| `privacy.html` | Πολιτική απορρήτου |
 
 ## Πώς αλλάζω…
 - **Το μενού και τις τιμές** → `js/menu-data.js` (οδηγίες μέσα στο αρχείο)
@@ -24,4 +25,9 @@ Live: https://zacharatoss.github.io/mene-athens/
 - [ ] `googleReviewsUrl` στο `js/config.js`
 - [ ] Links για efood / Wolt όταν υπάρχουν
 - [ ] Πραγματικές φωτογραφίες και κείμενο «Για εμάς»
-- [ ] Σύντομη πολιτική απορρήτου/cookies (λόγω Google Maps & Google Fonts)
+- [ ] Συμπλήρωση επωνυμίας, ΑΦΜ και email στο `privacy.html` (κίτρινα σημεία)
+- [ ] Όταν μπουν δικές σας φωτογραφίες, σβήστε την ενότητα «Φωτογραφίες» (Unsplash) από το `privacy.html`
+
+## Ασφάλεια & απόρρητο
+- Οι γραμματοσειρές είναι στον φάκελο `fonts/` (όχι από Google Fonts).
+- Κάθε σελίδα έχει Content Security Policy στο `<head>`. Αν προσθέσετε νέα εξωτερική υπηρεσία (π.χ. analytics), πρέπει να μπει και εκεί, και να ενημερωθεί το `privacy.html`.

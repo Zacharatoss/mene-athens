@@ -69,7 +69,7 @@ function renderFooter() {
           <p><a href="${igHref}" target="_blank" rel="noopener">@${esc(SITE.instagram)}</a></p>
         </div>
       </div>
-      <div class="footer-bottom">© ${new Date().getFullYear()} ${esc(SITE.name)}</div>
+      <div class="footer-bottom">© ${new Date().getFullYear()} ${esc(SITE.name)} · <a href="privacy.html">Πολιτική απορρήτου</a></div>
     </div>`;
 }
 
@@ -129,10 +129,10 @@ function renderMenu() {
   const body = document.getElementById("menu-body");
   if (!nav || !body || typeof MENU === "undefined") return;
 
-  nav.innerHTML = MENU.map((c) => `<a href="#${c.id}">${esc(c.title)}</a>`).join("");
+  nav.innerHTML = MENU.map((c) => `<a href="#${esc(c.id)}">${esc(c.title)}</a>`).join("");
   body.innerHTML = MENU.map(
     (c) => `
-    <section class="menu-cat" id="${c.id}">
+    <section class="menu-cat" id="${esc(c.id)}">
       <h2>${esc(c.title)}</h2>
       ${c.note ? `<p class="menu-note">${esc(c.note)}</p>` : ""}
       <ul>
@@ -179,6 +179,22 @@ function openNowBadge() {
   el.classList.toggle("closed", !open);
 }
 
+/* Ο χάρτης Google φορτώνει μόνο όταν ο επισκέπτης πατήσει το κουμπί */
+function setupMapConsent() {
+  document.querySelectorAll("[data-map-src]").forEach((box) => {
+    const btn = box.querySelector("[data-map-load]");
+    if (!btn) return;
+    btn.addEventListener("click", () => {
+      const iframe = document.createElement("iframe");
+      iframe.className = "map";
+      iframe.title = `Χάρτης: ${SITE.name}`;
+      iframe.src = box.dataset.mapSrc;
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      box.replaceWith(iframe);
+    });
+  });
+}
+
 renderHeader();
 renderFooter();
 fillSiteData();
@@ -186,3 +202,4 @@ renderDelivery();
 renderReviews();
 renderMenu();
 openNowBadge();
+setupMapConsent();
