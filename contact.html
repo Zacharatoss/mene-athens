@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Επικοινωνία & Κρατήσεις · Μήνη Athens</title>
+  <meta name="description" content="Κρατήσεις, ωράριο και διεύθυνση του Μήνη Athens στην Καλλιθέα.">
+  <meta name="theme-color" content="#4d4e33">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <h1>Έλα <em>από εδώ</em></h1>
+        <p class="muted">Οι κρατήσεις γίνονται τηλεφωνικά. Για μεγάλες παρέες και γενέθλια, πάρε μια μέρα νωρίτερα.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div>
+          <a class="booking-phone" data-site="phone" href="#" style="font-size:clamp(2.6rem,6vw,4.6rem)"></a>
+          <ul class="info-list">
+            <li><span>Διεύθυνση</span><a data-site="address" href="#" target="_blank" rel="noopener"></a></li>
+            <li><span>Ωράριο</span><p data-site="hours"></p></li>
+            <li><span>Instagram</span><a data-site="instagram" href="#" target="_blank" rel="noopener"></a></li>
+            <li><span>Delivery</span><div class="btn-row" data-delivery></div></li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-moon" data-href="tel" href="#">Κάλεσε τώρα</a>
+            <a class="btn" data-href="maps" href="#">Οδηγίες ↗</a>
+          </div>
+        </div>
+
+        <iframe class="map" title="Χάρτης: Μήνη Athens"
+          src="https://maps.google.com/maps?q=%CE%A0%CE%B1%CF%80%CE%B1%CE%B6%CE%B1%CF%87%CE%B1%CF%81%CE%AF%CE%BF%CF%85%203%2C%20%CE%9A%CE%B1%CE%BB%CE%BB%CE%B9%CE%B8%CE%AD%CE%B1&z=16&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <a class="btn btn-moon mobile-call" data-href="tel" href="#">Κράτηση τηλεφωνικά</a>
+
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
