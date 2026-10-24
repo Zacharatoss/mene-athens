@@ -64,8 +64,9 @@ function renderFooter() {
           <p><a href="${mapsHref}" target="_blank" rel="noopener">${esc(SITE.address)}</a></p>
         </div>
         <div>
-          <h4>Κρατήσεις & social</h4>
+          <h4>Επικοινωνία</h4>
           <p><a href="${telHref}">${esc(SITE.phoneDisplay)}</a></p>
+          <p><a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a></p>
           <p><a href="${igHref}" target="_blank" rel="noopener">@${esc(SITE.instagram)}</a></p>
         </div>
       </div>
@@ -81,6 +82,7 @@ function fillSiteData() {
     if (key === "address") { el.textContent = SITE.address; if (el.tagName === "A") el.href = mapsHref; }
     if (key === "hours") el.textContent = SITE.hours;
     if (key === "instagram") { el.textContent = `@${SITE.instagram}`; if (el.tagName === "A") el.href = igHref; }
+    if (key === "email") { el.textContent = SITE.email; if (el.tagName === "A") el.href = `mailto:${SITE.email}`; }
   });
   document.querySelectorAll("[data-href]").forEach((el) => {
     el.href = { tel: telHref, instagram: igHref, maps: mapsHref }[el.dataset.href] || el.href;

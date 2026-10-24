@@ -14,18 +14,19 @@ const SITE = {
   address: "Παπαζαχαρίου 3, Καλλιθέα",
   mapsQuery: "Παπαζαχαρίου 3, Καλλιθέα 176 74",
 
-  phone: "2109242328",
-  phoneDisplay: "210 924 2328",
+  phone: "6986239476",
+  phoneDisplay: "698 623 9476",
+
+  email: "menea8ens26@gmail.com",
 
   instagram: "mene.a8ens",
 
   hours: "Δευτέρα – Κυριακή, 08:00 – 01:00",
 
-  /* Delivery: όταν έχετε link, βάλτε το εδώ (π.χ. "https://www.efood.gr/...").
+  /* Delivery: όταν έχετε link από το efood, βάλτε το εδώ (π.χ. "https://www.efood.gr/...").
      Όσο είναι κενό, το κουμπί δείχνει «Σύντομα». */
   delivery: [
     { name: "efood", url: "" },
-    { name: "Wolt", url: "" },
   ],
 
   /* Link για «Όλες οι κριτικές στο Google» (από το Google Business Profile). */

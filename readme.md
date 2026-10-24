@@ -15,7 +15,7 @@ Live: https://zacharatoss.github.io/mene-athens/
 
 ## Πώς αλλάζω…
 - **Το μενού και τις τιμές** → `js/menu-data.js` (οδηγίες μέσα στο αρχείο)
-- **Τηλέφωνο, ωράριο, Instagram, κριτικές, delivery links** → `js/config.js`
+- **Τηλέφωνο, email, ωράριο, Instagram, κριτικές, delivery link** → `js/config.js`
 - **Λογότυπο** → `images/logo.png` (ρύθμιση `logo` στο `js/config.js`)
 - **Χρώματα** → στην αρχή του `css/style.css` (μεταβλητές `--paper` για το λαδί και `--moon` για το χρυσό)
 - **Φωτογραφίες** → είναι προσωρινές από το Unsplash. Βάλε τις δικές σου στο `images/` και άλλαξε τα `src="…"` στα `.html`
@@ -23,9 +23,9 @@ Live: https://zacharatoss.github.io/mene-athens/
 ## Πριν βγει online
 - [ ] Πραγματικές κριτικές στο `js/config.js` (οι τωρινές είναι δείγματα) και `reviewsAreSamples: false`
 - [ ] `googleReviewsUrl` στο `js/config.js`
-- [ ] Links για efood / Wolt όταν υπάρχουν
+- [ ] Link για efood όταν υπάρχει
 - [ ] Πραγματικές φωτογραφίες και κείμενο «Για εμάς»
-- [ ] Συμπλήρωση επωνυμίας, ΑΦΜ και email στο `privacy.html` (κίτρινα σημεία)
+- [ ] Συμπλήρωση επωνυμίας και ΑΦΜ στο `privacy.html` (κίτρινα σημεία)
 - [ ] Όταν μπουν δικές σας φωτογραφίες, σβήστε την ενότητα «Φωτογραφίες» (Unsplash) από το `privacy.html`
 
 ## Ασφάλεια & απόρρητο

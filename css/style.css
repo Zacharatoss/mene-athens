@@ -225,7 +225,7 @@ h1 em, h2 em, h3 em { font-style: italic; font-weight: 400; }
 }
 .action-phone:hover { color: var(--moon); }
 .action-card .btn { margin-top: auto; }
-.delivery-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; margin-top: auto; }
+.delivery-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; width: 100%; margin-top: auto; }
 .delivery-btn {
   display: flex; flex-direction: column; gap: 2px; padding: 18px 20px; border-radius: 12px;
   background: var(--moon); color: var(--dark); text-decoration: none;
